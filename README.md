@@ -40,6 +40,29 @@
 | :------------------------- |
 | Displays the index page which will have 10 Questions|
 
+#### Get The Quiz Questions in Json format
+
+```http
+  GET /quiz
+```
+
+| Description                |
+| :------------------------- |
+| Sends the Questions and Answers in JSON Format|
+
+
+#### The Answers will be Evaluate through a post Req
+
+```http
+  POST /submit
+```
+
+| Description                |
+| :------------------------- |
+| Evaluates The answers recieved from the form|
+
+
+
 #### Results
 
 ```http

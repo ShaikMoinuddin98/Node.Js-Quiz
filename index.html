@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.js Quiz</title>
+</head>
+<body>
+    <h1>Node.js Quiz</h1>
+    <form action="/submit" method="post">
+        <!-- Dynamically populate questions and options here using JavaScript -->
+        <input type="submit" value="Submit">
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            // Fetch quiz questions from server and populate HTML
+            $.get('/quiz', (data) => {
+                data.forEach((question, index) => {
+                    $('form').append(`<h3>${index + 1}. ${question.question}</h3>`);
+                    question.options.forEach((option) => {
+                        $('form').append(`<input type="radio" name="answers[${index}]" value="${option}"> ${option}<br>`);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

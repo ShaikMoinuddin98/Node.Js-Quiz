@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+</head>
+<body>
+    <h1>Quiz Results</h1>
+    <div id="score"></div>
+    <div id="feedback"></div>
+
+    <script>
+        // Function to fetch quiz results from the API
+        function fetchResults() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var score = urlParams.get('score');
+            var feedback = JSON.parse(urlParams.get('feedback'));
+
+            displayResults({ score, feedback });
+        }
+
+        // Function to display quiz results
+        function displayResults(data) {
+            var score = data.score;
+            var feedback = data.feedback;
+
+            document.getElementById('score').innerHTML = 'Score: ' + score;
+
+            var feedbackHtml = '';
+            feedback.forEach(function (item, index) {
+                feedbackHtml += '<p><strong>Question ' + (index + 1) + ': </strong>' + item.question + '<br>';
+                if (item.correct) {
+                    feedbackHtml += 'Your answer is correct!</p>';
+                } else {
+                    feedbackHtml += 'Your answer is incorrect. Correct answer: ' + item.correctAnswer + '</p>';
+                }
+            });
+
+            document.getElementById('feedback').innerHTML = feedbackHtml;
+        }
+
+        // Call the fetchResults function when the page loads
+        window.onload = function () {
+            fetchResults();
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+[
+    {
+        "question": "What is the main purpose of modules in Node.js?",
+        "options": [
+            "To define routes in Express.js",
+            "To organize and encapsulate code into reusable units",
+            "To handle asynchronous operations",
+            "To create event listeners"
+        ],
+        "answer": "To organize and encapsulate code into reusable units"
+    },
+    {
+        "question": "Which of the following is NOT a core module in Node.js?",
+        "options": [
+            "http",
+            "fs",
+            "express",
+            "path"
+        ],
+        "answer": "express"
+    },
+    {
+        "question": "What role does the event loop play in Node.js?",
+        "options": [
+            "It handles file system operations synchronously",
+            "It manages asynchronous operations and callbacks",
+            "It executes JavaScript code in a separate thread",
+            "It provides a graphical user interface for Node.js applications"
+        ],
+        "answer": "It manages asynchronous operations and callbacks"
+    },
+    {
+        "question": "In Node.js, what is a callback?",
+        "options": [
+            "A function passed as an argument to another function, to be executed later",
+            "A built-in module for handling file system operations",
+            "An error message returned by the Node.js runtime",
+            "A method for creating child processes"
+        ],
+        "answer": "A function passed as an argument to another function, to be executed later"
+    },
+    {
+        "question": "What is the purpose of the 'require' function in Node.js?",
+        "options": [
+            "To include external libraries and modules",
+            "To define global variables",
+            "To create event listeners",
+            "To manage HTTP requests and responses"
+        ],
+        "answer": "To include external libraries and modules"
+    },
+    {
+        "question": "Which method is used to handle asynchronous code in Node.js?",
+        "options": [
+            "setTimeout",
+            "setInterval",
+            "sync",
+            "async"
+        ],
+        "answer": "async"
+    },
+    {
+        "question": "What does the term 'middleware' refer to in the context of Express.js?",
+        "options": [
+            "A function that handles HTTP request-response cycle",
+            "A front-end framework for building user interfaces",
+            "A method for creating routes in Express.js",
+            "A module for handling database operations"
+        ],
+        "answer": "A function that handles HTTP request-response cycle"
+    },
+    {
+        "question": "How does Node.js handle blocking I/O operations?",
+        "options": [
+            "By executing them synchronously, which may block the event loop",
+            "By executing them asynchronously, which may lead to race conditions",
+            "By delegating them to a separate thread",
+            "By using promises to ensure non-blocking behavior"
+        ],
+        "answer": "By executing them synchronously, which may block the event loop"
+    },
+    {
+        "question": "Which HTTP method is typically used for retrieving data from a server in a RESTful API?",
+        "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+        ],
+        "answer": "GET"
+    },
+    {
+        "question": "What is the purpose of the 'process' object in Node.js?",
+        "options": [
+            "To manage the Node.js runtime environment",
+            "To execute shell commands",
+            "To create child processes",
+            "To handle file system operations"
+        ],
+        "answer": "To manage the Node.js runtime environment"
+    }
+]
